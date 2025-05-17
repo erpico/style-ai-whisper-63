@@ -35,8 +35,8 @@ export const LifestyleForm: React.FC = () => {
     }, 2000);
   };
   
-  const occupationOptions = ['Офисная работа', 'Творческая профессия', 'Свободный график', 'Студент', 'Другое'];
-  const styleGoals = ['Выглядеть стильно', 'Выглядеть профессионально', 'Комфорт прежде всего', 'Уверенность', 'Соответствие трендам'];
+  const occupationOptions = ['Office Work', 'Creative Profession', 'Flexible Schedule', 'Student', 'Other'];
+  const styleGoals = ['Look Stylish', 'Look Professional', 'Comfort First', 'Confidence', 'Follow Trends'];
   
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
@@ -48,22 +48,22 @@ export const LifestyleForm: React.FC = () => {
               <path d="M12 6v6l4 2"></path>
             </svg>
           </div>
-          <h2 className="text-xl font-bold text-fashion-deepPurple mb-2">Создаём ваш стильный профиль</h2>
-          <p className="text-fashion-gray">Пожалуйста, подождите, мы подбираем для вас идеальные образы...</p>
+          <h2 className="text-xl font-bold text-fashion-deepPurple mb-2">Creating your style profile</h2>
+          <p className="text-fashion-gray">Please wait, we're selecting perfect outfits for you...</p>
         </div>
       ) : (
         <>
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Расскажите о вашем образе жизни</h2>
+            <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Tell us about your lifestyle</h2>
             <p className="text-fashion-gray">
-              Расскажите немного о себе — чем занимаетесь, где проводите время, как хотите выглядеть
+              Tell us a bit about yourself — what you do, where you spend your time, how you want to look
             </p>
           </div>
           
           <form onSubmit={handleSubmit} className="fashion-card">
             <div className="mb-6">
               <label htmlFor="occupation" className="block text-sm font-medium text-fashion-deepPurple mb-2">
-                Чем вы занимаетесь?
+                What do you do?
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-3">
                 {occupationOptions.map(option => (
@@ -81,11 +81,11 @@ export const LifestyleForm: React.FC = () => {
                   </button>
                 ))}
               </div>
-              {occupation === 'Другое' && (
+              {occupation === 'Other' && (
                 <input
                   type="text"
                   className="fashion-input mt-2"
-                  placeholder="Укажите вашу сферу деятельности"
+                  placeholder="Specify your field of activity"
                   onChange={(e) => setOccupation(e.target.value)}
                 />
               )}
@@ -93,20 +93,20 @@ export const LifestyleForm: React.FC = () => {
             
             <div className="mb-6">
               <label htmlFor="activities" className="block text-sm font-medium text-fashion-deepPurple mb-2">
-                Где вы чаще бываете?
+                Where do you spend most of your time?
               </label>
               <textarea
                 id="activities"
                 value={activities}
                 onChange={(e) => setActivities(e.target.value)}
                 className="fashion-input min-h-[100px]"
-                placeholder="Например: в офисе, на встречах с друзьями, на природе, в спортзале..."
+                placeholder="For example: at the office, meeting friends, outdoors, at the gym..."
               />
             </div>
             
             <div className="mb-8">
               <label className="block text-sm font-medium text-fashion-deepPurple mb-2">
-                В чём хотите чувствовать себя комфортно?
+                What do you want to feel comfortable in?
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {styleGoals.map(goal => (
@@ -132,7 +132,7 @@ export const LifestyleForm: React.FC = () => {
                 className="fashion-button-primary"
                 disabled={!occupation || !activities || !goals}
               >
-                Создать мой стильный профиль
+                Create My Style Profile
               </button>
             </div>
           </form>

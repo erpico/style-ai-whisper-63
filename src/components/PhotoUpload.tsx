@@ -67,9 +67,9 @@ export const PhotoUpload: React.FC = () => {
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Загрузите Ваше фото</h2>
+        <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Upload Your Photo</h2>
         <p className="text-fashion-gray">
-          Загрузите, пожалуйста, фото — я посмотрю, какие силуэты и цвета вам подойдут лучше всего ✨
+          Please upload a photo — I'll see which silhouettes and colors would suit you best ✨
         </p>
       </div>
       
@@ -87,7 +87,7 @@ export const PhotoUpload: React.FC = () => {
         {isLoading ? (
           <div className="py-12 flex flex-col items-center">
             <div className="w-12 h-12 rounded-full border-4 border-fashion-purple border-t-transparent animate-spin mb-4"></div>
-            <p className="text-fashion-gray">Анализируем ваше фото...</p>
+            <p className="text-fashion-gray">Analyzing your photo...</p>
           </div>
         ) : photoUrl ? (
           <div className="relative py-4">
@@ -123,10 +123,10 @@ export const PhotoUpload: React.FC = () => {
               />
             </svg>
             <p className="mt-4 text-fashion-gray mb-6">
-              Перетащите файл сюда или нажмите для загрузки
+              Drag and drop file here or click to upload
             </p>
             <label className="fashion-button-primary inline-block cursor-pointer">
-              Выбрать файл
+              Choose File
               <input 
                 type="file" 
                 accept="image/*" 
@@ -143,7 +143,7 @@ export const PhotoUpload: React.FC = () => {
           onClick={handleSkip}
           className="text-fashion-gray hover:text-fashion-purple transition-colors"
         >
-          Продолжить без фото
+          Continue without photo
         </button>
       </div>
     </div>

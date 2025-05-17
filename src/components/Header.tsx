@@ -15,13 +15,13 @@ export const Header: React.FC = () => {
               <path d="M18 8H9a4 4 0 1 0 0 8h7"></path>
             </svg>
           </div>
-          <h1 className="font-bold text-xl text-fashion-deepPurple">Модный<span className="text-fashion-purple">AI</span></h1>
+          <h1 className="font-bold text-xl text-fashion-deepPurple">Fashion<span className="text-fashion-purple">AI</span></h1>
         </div>
         
         <nav>
           <ul className="flex space-x-6">
             <li>
-              <button className="fashion-button-outline py-2">Начать заново</button>
+              <button className="fashion-button-outline py-2">Start Again</button>
             </li>
           </ul>
         </nav>

@@ -14,13 +14,13 @@ export const UserInfoForm: React.FC = () => {
     
     // Basic validation
     if (!age.trim() || !size.trim()) {
-      setValidationError('Пожалуйста, заполните все поля');
+      setValidationError('Please fill in all fields');
       return;
     }
     
     const ageNum = parseInt(age);
     if (isNaN(ageNum) || ageNum < 1 || ageNum > 120) {
-      setValidationError('Пожалуйста, введите корректный возраст');
+      setValidationError('Please enter a valid age');
       return;
     }
     
@@ -36,9 +36,9 @@ export const UserInfoForm: React.FC = () => {
   return (
     <div className="w-full max-w-2xl mx-auto animate-fade-in">
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Ваш возраст и размер</h2>
+        <h2 className="text-2xl font-bold text-fashion-deepPurple mb-3">Your Age and Size</h2>
         <p className="text-fashion-gray">
-          Чтобы точнее подобрать вещи, скажите, пожалуйста, ваш возраст и размер одежды
+          To better select clothes, please tell us your age and clothing size
         </p>
       </div>
       
@@ -51,7 +51,7 @@ export const UserInfoForm: React.FC = () => {
         
         <div className="mb-6">
           <label htmlFor="age" className="block text-sm font-medium text-fashion-deepPurple mb-2">
-            Возраст
+            Age
           </label>
           <input
             type="number"
@@ -59,7 +59,7 @@ export const UserInfoForm: React.FC = () => {
             value={age}
             onChange={(e) => setAge(e.target.value)}
             className="fashion-input"
-            placeholder="Введите ваш возраст"
+            placeholder="Enter your age"
             min="1"
             max="120"
           />
@@ -67,7 +67,7 @@ export const UserInfoForm: React.FC = () => {
         
         <div className="mb-8">
           <label htmlFor="size" className="block text-sm font-medium text-fashion-deepPurple mb-2">
-            Размер одежды
+            Clothing Size
           </label>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {sizeOptions.map(option => (
@@ -89,7 +89,7 @@ export const UserInfoForm: React.FC = () => {
         
         <div className="flex justify-end">
           <button type="submit" className="fashion-button-primary">
-            Продолжить
+            Continue
           </button>
         </div>
       </form>

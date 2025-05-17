@@ -19,16 +19,16 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-fashion-deepPurple mb-6 leading-tight">
-              Ваш персональный<br /><span className="text-fashion-purple">AI-стилист</span>
+              Your personal<br /><span className="text-fashion-purple">AI-stylist</span>
             </h1>
             <p className="text-lg text-fashion-gray mb-8 max-w-lg mx-auto md:mx-0">
-              Не знаете, что подойдёт именно вам? Наш AI-стилист подберёт идеальные образы на основе вашего типа внешности и образа жизни.
+              Not sure what suits you? Our AI stylist will select perfect outfits based on your appearance and lifestyle.
             </p>
             <button 
               onClick={handleGetStarted} 
               className="fashion-button-primary text-lg px-8 py-4"
             >
-              Подобрать мой стиль
+              Find My Style
             </button>
           </div>
           
@@ -43,10 +43,10 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
                   <div className="p-6 text-white">
                     <span className="bg-fashion-purple text-white px-3 py-1 rounded-full text-sm font-medium mb-2 inline-block">
-                      AI рекомендация
+                      AI Recommendation
                     </span>
                     <p className="text-lg font-medium">
-                      Узнайте, какие образы подойдут именно вам
+                      Discover what outfits are perfect for you
                     </p>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
               
               <div className="hidden md:block absolute -bottom-6 -left-6 w-28 h-12 fashion-card -rotate-6">
                 <div className="h-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-fashion-purple">10+ стилей</span>
+                  <span className="text-sm font-medium text-fashion-purple">10+ styles</span>
                 </div>
               </div>
             </div>
@@ -89,9 +89,9 @@ export const Hero: React.FC = () => {
                 <path d="M8 16h.01"></path>
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">Персональная анкета</h3>
+            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">Personal Questionnaire</h3>
             <p className="text-fashion-gray">
-              Расскажите о своих предпочтениях и образе жизни, чтобы получить максимально точные рекомендации
+              Tell us about your preferences and lifestyle to receive the most accurate recommendations
             </p>
           </div>
           
@@ -104,9 +104,9 @@ export const Hero: React.FC = () => {
                 <path d="m20 19-4-1m-4-1-4-1m-4-1-4-1"></path>
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">AI-анализ</h3>
+            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">AI Analysis</h3>
             <p className="text-fashion-gray">
-              Технологии искусственного интеллекта проанализируют ваши данные и подберут идеальные комбинации
+              Artificial intelligence technologies analyze your data and select ideal combinations
             </p>
           </div>
           
@@ -122,9 +122,9 @@ export const Hero: React.FC = () => {
                 <path d="M4 22 20 7"></path>
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">Готовые образы</h3>
+            <h3 className="text-lg font-semibold text-fashion-deepPurple mb-2">Ready Outfits</h3>
             <p className="text-fashion-gray">
-              Получите 10 полностью подобранных образов с описанием и рекомендациями
+              Get 10 fully curated outfits with descriptions and recommendations
             </p>
           </div>
         </div>

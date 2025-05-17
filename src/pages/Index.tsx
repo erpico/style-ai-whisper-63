@@ -9,7 +9,7 @@ import { LifestyleForm } from '@/components/LifestyleForm';
 import { OutfitRecommendations } from '@/components/OutfitRecommendations';
 import { useStyleAssistant, StyleAssistantProvider } from '@/context/StyleAssistantContext';
 
-const steps = ['Фото', 'Размеры', 'Образ жизни', 'Результаты'];
+const steps = ['Photo', 'Size', 'Lifestyle', 'Results'];
 
 const AssistantContent = () => {
   const { currentStep } = useStyleAssistant();

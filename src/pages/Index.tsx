@@ -1,13 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { Layout } from '@/components/Layout';
+import { Hero } from '@/components/Hero';
+import { StepFlow } from '@/components/StepFlow';
+import { PhotoUpload } from '@/components/PhotoUpload';
+import { UserInfoForm } from '@/components/UserInfoForm';
+import { LifestyleForm } from '@/components/LifestyleForm';
+import { OutfitRecommendations } from '@/components/OutfitRecommendations';
+import { useStyleAssistant, StyleAssistantProvider } from '@/context/StyleAssistantContext';
+
+const steps = ['Фото', 'Размеры', 'Образ жизни', 'Результаты'];
+
+const AssistantContent = () => {
+  const { currentStep } = useStyleAssistant();
+  
+  return (
+    <div>
+      {currentStep > 0 && currentStep <= 4 && (
+        <StepFlow currentStep={currentStep} steps={steps} />
+      )}
+      
+      {currentStep === 1 && <PhotoUpload />}
+      {currentStep === 2 && <UserInfoForm />}
+      {currentStep === 3 && <LifestyleForm />}
+      {currentStep === 4 && <OutfitRecommendations />}
+      {currentStep === 0 && <Hero />}
+    </div>
+  );
+};
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <StyleAssistantProvider>
+      <Layout>
+        <AssistantContent />
+      </Layout>
+    </StyleAssistantProvider>
   );
 };
 
